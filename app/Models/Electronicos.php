@@ -13,6 +13,7 @@ class Electronicos extends Model
 
     protected $fillable = [
         'nombre',
+        'foto',
         'precio',
         'marca',
         'caracteristicas',

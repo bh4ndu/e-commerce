@@ -5,7 +5,12 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\controlStockController;
+use App\Http\Controllers\ElectronicosController;
+use App\Http\Controllers\EntretenimientoController;
 use App\Http\Controllers\LogoutController;
+use App\Http\Controllers\registrarProductoController;
+use App\Http\Controllers\RopaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,6 +44,13 @@ Route::middleware(['auth', 'verified'])->group(function () {
     
 
     Route::post('/logout', [LogoutController::class, 'logout'])->name('logout');
+
+    Route::resource('RegistrarProducto', registrarProductoController::class);
+    Route::resource('controlStock', controlStockController::class);
+    Route::resource('Electronicos', ElectronicosController::class);
+    Route::resource('Entretenimiento', EntretenimientoController::class);
+    Route::resource('Ropa', RopaController::class);
+
 });
 
 

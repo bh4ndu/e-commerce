@@ -12,25 +12,34 @@
         font-variation-settings:
         "wdth" 100.6;
     }
+
 </style>
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="shortcut icon" href="assets/logos/logoPrime.png" type="image/x-icon">
+
 </head>
 @section('sidebar')
 <section class="offcanvas offcanvas-start bg-dark">
+    <center><img src="assets/logos/logoPrime.png" style="width: 100px; height: 80px;"></center>
     <div class="offcanvas-body">
         <ul class="navbar-nav fs-5">
-            <li class="nav-item p-3 py-md-1"><a href="#" class="nav-link">Inicio</a></li>
-            <li class="nav-item p-3 py-md-1"><a href="#" class="nav-link">Registrar producto</a></li>
-            <li class="nav-item p-3 py-md-1"><a href="#" class="nav-link">Control de stock</a></li>
-            <li class="nav-item p-3 py-md-1"><a href="#" class="nav-link">electronicos</a></li>
-            <li class="nav-item p-3 py-md-1"><a href="#" class="nav-link">entretenimiento</a></li>
-            <li class="nav-item p-3 py-md-1"><a href="#" class="nav-link">ropa</a></li>
+            <li class="nav-item p-3 py-md-1"><a href="{{ route('home') }}" class="nav-link"><i class="fa-solid fa-house" style="padding-right:10px;"></i> Inicio</a></li>
+            <li class="nav-item p-3 py-md-1"><a href="{{ route('RegistrarProducto.index') }}" class="nav-link"><i class="fa-regular fa-registered" style="padding-right:10px;"></i> Registrar producto</a></li>
+            <li class="nav-item p-3 py-md-1"><a href="{{ route('controlStock.index') }}" class="nav-link"><i class="fa-regular fa-clipboard" style="padding-right:10px;"></i> Control de stock</a></li>
+            <li class="nav-item p-3 py-md-1"><a href="{{ route('Electronicos.index') }}" class="nav-link"><i class="fa-solid fa-microchip" style="padding-right:10px;"></i> electronicos</a></li>
+            <li class="nav-item p-3 py-md-1"><a href="{{ route('Entretenimiento.index') }}" class="nav-link"><i class="fa-solid fa-gamepad" style="padding-right:10px;"></i> entretenimiento</a></li>
+            <li class="nav-item p-3 py-md-1"><a href="{{ route('Ropa.index') }}" class="nav-link"><i class="fa-solid fa-shirt" style="padding-right:10px;"></i> ropa</a></li>
         </ul>
     </div>
 </section>
 @endsection
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dashboard</title>
+</head>
 
 @section('content')
 @include('layouts.headerAdmin')

@@ -13,6 +13,7 @@ class Ropa extends Model
 
     protected $fillable = [
         'nombre',
+        'foto',
         'precio',
         'marca',
         'tipo',

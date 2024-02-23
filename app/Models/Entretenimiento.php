@@ -13,9 +13,10 @@ class Entretenimiento extends Model
 
     protected $fillable = [
         'nombre',
+        'foto',
         'precio',
         'marca',
         'caracteristicas',
-        'stock',
+        'stock'
     ];
 }
